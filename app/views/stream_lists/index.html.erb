@@ -1,29 +1,12 @@
-<p id="notice"><%= notice %></p>
+<%= @stream_lists.each do |stream_list| %>
+  <div class="index_row clearfix">
+    <h2 class="stream_list_title">
+      <%= link_to stream_list.title, stream_list %></h2>
+    <p class="stream_list_sub_title">
+      <%= stream_list.description %></p>
+  </div>
+<% end %>
 
-<h1>Listing Stream Lists</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stream_lists.each do |stream_list| %>
-      <tr>
-        <td><%= stream_list.title %></td>
-        <td><%= stream_list.description %></td>
-        <td><%= link_to 'Show', stream_list %></td>
-        <td><%= link_to 'Edit', edit_stream_list_path(stream_list) %></td>
-        <td><%= link_to 'Destroy', stream_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Stream list', new_stream_list_path %>
+<div class="links">
+  <%= link_to "New Stream List", new_stream_list_path %>
+</div>
