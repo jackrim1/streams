@@ -1,0 +1,1 @@
+json.array! @stream_lists, partial: 'stream_lists/stream_list', as: :stream_list

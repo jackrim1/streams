@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @stream_list.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @stream_list.description %>
+</p>
+
+<div id="stream_items_wrapper">
+  <%= render @stream_list.stream_items %>
+  <div id="form">
+    <%= render "stream_items/form" %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_stream_list_path(@stream_list) %> |
+<%= link_to 'Back', stream_lists_path %>

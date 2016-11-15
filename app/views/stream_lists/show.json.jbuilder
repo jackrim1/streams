@@ -1,0 +1,1 @@
+json.partial! "stream_lists/stream_list", stream_list: @stream_list
